@@ -1,11 +1,11 @@
 import type { Dict } from './strings'
 
 const ptBR: Dict = {
-  appName: 'Fé em Campo',
+  appName: 'H7O.LIFE',
   appSub: 'Estados Unidos · Canadá · México',
-  appFullName: 'Fé Em Campo com Portas Abertas',
+  appFullName: 'H7O.LIFE — Copa 2026',
   metaDesc:
-    'Conheça quais são os países da Lista Mundial de Perseguição (LMP) 2026 que foram escalados e como você pode orar por cada um deles.',
+    'Acompanhe a Copa do Mundo 2026 e veja a situação hídrica de cada seleção, comparada à seca no sertão brasileiro. Doe e ajude a levar água a quem precisa.',
   // nav
   navHome: 'Início',
   navMatches: 'Jogos',

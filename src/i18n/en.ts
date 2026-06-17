@@ -1,11 +1,11 @@
 import type { Dict } from './strings'
 
 const en: Dict = {
-  appName: '2026 World Cup',
+  appName: 'H7O.LIFE',
   appSub: 'United States · Canada · Mexico',
-  appFullName: '2026 World Cup Open Source Companion',
+  appFullName: 'H7O.LIFE — World Cup 2026',
   metaDesc:
-    '2026 World Cup: schedule, groups, bracket, teams, venues, weather, where to watch, win probabilities and tournament forecast, in 23 languages. Unofficial open-source PWA',
+    'Follow the 2026 World Cup and see each team’s water situation, compared with the drought in Brazil’s sertão. Donate and help bring water to those who need it.',
   // nav
   navHome: 'Home',
   navMatches: 'Matches',
