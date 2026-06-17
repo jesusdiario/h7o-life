@@ -6,8 +6,7 @@ import { useSettings } from '../settings/SettingsContext'
 import { useAppData } from '../data/DataContext'
 import Flag from '../components/Flag'
 import Icon from '../components/Icon'
-import PrayIcon from '../components/PrayIcon'
-import { feProfile } from '../data/feEmCampo'
+import WaterIcon from '../components/WaterIcon'
 import { makeTeamMatcher } from '../utils/teamSearch'
 import './teams.css'
 
@@ -16,18 +15,15 @@ function TeamCard({ team }: { team: Team }) {
   const { settings, toggleFavorite } = useSettings()
   const fav = settings.favorites.includes(team.code)
   const favLabel = t(fav ? 'removeFavorite' : 'addFavorite')
-  const fe = feProfile(team.code)
   return (
     <Link to={`/team/${team.code}`} className="card tm-card">
       <Flag team={team} size={36} />
       <div className="tm-info">
         <div className="tm-name">
           {pick(team.name, team.code)}
-          {fe && (
-            <span className="tm-pray" title="Fé em Campo — ore por esta nação">
-              <PrayIcon size={15} />
-            </span>
-          )}
+          <span className="tm-pray" title="Água em campo">
+            <WaterIcon size={15} />
+          </span>
         </div>
         <div className="tm-meta small muted">
           {team.ranking !== null && <span className="chip tnum">#{team.ranking}</span>}

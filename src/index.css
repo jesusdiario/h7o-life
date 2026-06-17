@@ -250,7 +250,7 @@ table {
   flex: none;
   padding: 7px 14px;
   border-radius: 999px;
-  background: #7a2e6e;
+  background: #0c87cc;
   color: #fff;
   font-family: var(--font-display);
   font-weight: 700;
@@ -259,37 +259,35 @@ table {
   transition: filter 0.15s ease;
 }
 .donate-btn:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.08);
 }
-[data-theme='dark'] .donate-btn {
-  background: #9b3f8d;
+/* desktop: texto completo (ex.: "Doar Agora"); mobile: texto curto (ex.: "Doar") */
+.donate-short {
+  display: none;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .donate-btn {
-    background: #9b3f8d;
-  }
-}
-/* no celular, mostra ícone + "Doar" (oculta apenas o " Agora") */
 @media (max-width: 560px) {
   .donate-btn {
     padding: 7px 11px;
   }
-  .donate-extra {
+  .donate-full {
     display: none;
+  }
+  .donate-short {
+    display: inline;
   }
 }
 
-/* bloco "Fé em Campo" — usado na página do time e na tela da partida */
+/* bloco "Água em campo" — usado na página do time e na tela da partida */
 .fe-card {
-  --fe-accent: #7a2e6e;
+  --fe-accent: #0c87cc;
   border-left: 4px solid var(--fe-accent);
 }
 [data-theme='dark'] .fe-card {
-  --fe-accent: #cf9bc8;
+  --fe-accent: #4db5e8;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .fe-card {
-    --fe-accent: #cf9bc8;
+    --fe-accent: #4db5e8;
   }
 }
 .fe-head {
@@ -309,61 +307,31 @@ table {
 .fe-sub {
   margin: 2px 0 0;
 }
-.fe-person {
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-.fe-quote {
-  margin: 8px 0;
-  padding-left: 12px;
-  border-left: 2px solid var(--border-strong);
-  font-style: italic;
-  color: var(--text-2);
-}
 .fe-text {
   margin: 6px 0 14px;
   line-height: 1.55;
 }
-/* botão roxo igual ao "Doar Agora", texto branco (a.fe-cta vence o .btn base) */
+/* botão azul, texto branco (a.fe-cta vence o .btn base) */
 a.fe-cta,
 a.fe-cta:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #7a2e6e;
+  background: #0c87cc;
   color: #fff;
   border: none;
   font-weight: 600;
 }
 a.fe-cta:hover {
-  filter: brightness(1.1);
-}
-[data-theme='dark'] a.fe-cta,
-[data-theme='dark'] a.fe-cta:hover {
-  background: #9b3f8d;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) a.fe-cta,
-  :root:not([data-theme='light']) a.fe-cta:hover {
-    background: #9b3f8d;
-  }
+  filter: brightness(1.08);
 }
 
-/* marca "Fé em Campo" exibida à direita do nome dos times (grupos, jogos, etc.) */
+/* ícone de água exibido à direita do nome dos times (grupos, jogos, etc.) */
 .team-pray {
   display: inline-flex;
   vertical-align: middle;
   flex: none;
   margin-left: 5px;
-  color: #7a2e6e;
-}
-[data-theme='dark'] .team-pray {
-  color: #cf9bc8;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .team-pray {
-    color: #cf9bc8;
-  }
 }
 .shell-header-in {
   max-width: var(--page-w);
@@ -403,17 +371,17 @@ a.fe-cta:hover {
 }
 .pa-brand-logo {
   display: block;
-  height: 28px;
+  height: 26px;
   width: auto;
-  /* trava a proporção original (4283x585) para a imagem nunca distorcer,
+  /* trava a proporção original (1678x353) para a imagem nunca distorcer,
      mesmo quando o cabeçalho fica apertado no responsivo */
-  aspect-ratio: 4283 / 585;
+  aspect-ratio: 1678 / 353;
   flex: none;
   object-fit: contain;
 }
 @media (max-width: 560px) {
   .pa-brand-logo {
-    height: 24px;
+    height: 22px;
   }
 }
 

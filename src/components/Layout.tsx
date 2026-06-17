@@ -9,6 +9,7 @@ import type { Lang } from '../types'
 import Icon from './Icon'
 import type { IconName } from './Icon'
 import Freshness from './Freshness'
+import { campaignStrings, DONATE_URL } from '../data/waterTexts'
 
 const NAV: { to: string; key: string; icon: IconName }[] = [
   { to: '/', key: 'navMatches', icon: 'calendar' },
@@ -106,7 +107,8 @@ function LangMenu() {
 }
 
 export default function Layout() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
+  const donate = campaignStrings(lang)
   const { data } = useData()
   const tabs = tabsFor(groupStageComplete(data?.standings))
   const headerRef = useRef<HTMLElement>(null)
@@ -152,11 +154,11 @@ export default function Layout() {
     <>
       <header className="shell-header" ref={headerRef}>
         <div className="shell-header-in">
-          <NavLink to="/" className="brand" aria-label={`Portas Abertas — ${t('appName')}`}>
+          <NavLink to="/" className="brand" aria-label={`Jesus Diário — ${t('appName')}`}>
             <img
               className="pa-brand-logo"
-              src={`${import.meta.env.BASE_URL}portas-abertas-logo.png`}
-              alt="Portas Abertas"
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Jesus Diário"
             />
           </NavLink>
           <nav className="top-nav" ref={navRef}>
@@ -168,16 +170,15 @@ export default function Layout() {
           </nav>
           <a
             className="donate-btn"
-            href="https://campanha.portasabertas.org.br/"
+            href={DONATE_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 21c-1-.9-8-5.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.4-7 10.1-8 11Z" />
             </svg>
-            <span className="donate-label">
-              Doar<span className="donate-extra">&nbsp;Agora</span>
-            </span>
+            <span className="donate-full">{donate.donateNow}</span>
+            <span className="donate-short">{donate.donate}</span>
           </a>
           <LangMenu />
         </div>
