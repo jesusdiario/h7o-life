@@ -8,13 +8,13 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
+      includeAssets: ['favicon.png', 'favicon-32x32.png', 'favicon-16x16.png', 'icons/apple-touch-icon.png'],
       manifest: {
         id: './',
-        name: 'Fé Em Campo com Portas Abertas',
-        short_name: 'Fé em Campo',
+        name: 'H7O.LIFE — Copa 2026',
+        short_name: 'H7O.LIFE',
         description:
-          'Conheça quais são os países da Lista Mundial de Perseguição (LMP) 2026 que foram escalados e como você pode orar por cada um deles.',
+          'Acompanhe a Copa do Mundo 2026 e veja a situação hídrica de cada seleção, comparada à seca no sertão brasileiro. Doe e ajude a levar água a quem precisa.',
         start_url: './',
         scope: './',
         display: 'standalone',
