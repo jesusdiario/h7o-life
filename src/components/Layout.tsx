@@ -9,7 +9,8 @@ import type { Lang } from '../types'
 import Icon from './Icon'
 import type { IconName } from './Icon'
 import Freshness from './Freshness'
-import { campaignStrings, DONATE_URL } from '../data/waterTexts'
+import MissionModal from './MissionModal'
+import { campaignStrings } from '../data/waterTexts'
 
 const NAV: { to: string; key: string; icon: IconName }[] = [
   { to: '/', key: 'navMatches', icon: 'calendar' },
@@ -109,6 +110,7 @@ function LangMenu() {
 export default function Layout() {
   const { t, lang } = useI18n()
   const donate = campaignStrings(lang)
+  const [missionOpen, setMissionOpen] = useState(false)
   const { data } = useData()
   const tabs = tabsFor(groupStageComplete(data?.standings))
   const headerRef = useRef<HTMLElement>(null)
@@ -168,18 +170,13 @@ export default function Layout() {
               </NavLink>
             ))}
           </nav>
-          <a
-            className="donate-btn"
-            href={DONATE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <button type="button" className="donate-btn" onClick={() => setMissionOpen(true)}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 21c-1-.9-8-5.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.4-7 10.1-8 11Z" />
             </svg>
-            <span className="donate-full">{donate.donateNow}</span>
-            <span className="donate-short">{donate.donate}</span>
-          </a>
+            <span className="donate-full">{donate.joinMission}</span>
+            <span className="donate-short">{donate.joinShort}</span>
+          </button>
           <LangMenu />
         </div>
       </header>
@@ -202,6 +199,8 @@ export default function Layout() {
           </NavLink>
         ))}
       </nav>
+
+      {missionOpen && <MissionModal onClose={() => setMissionOpen(false)} />}
     </>
   )
 }
