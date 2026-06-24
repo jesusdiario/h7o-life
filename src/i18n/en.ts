@@ -3,9 +3,9 @@ import type { Dict } from './strings'
 const en: Dict = {
   appName: 'H7O.LIFE',
   appSub: 'United States · Canada · Mexico',
-  appFullName: 'H7O.LIFE — World Cup 2026',
+  appFullName: 'H7O at the World Cup',
   metaDesc:
-    'Follow the 2026 World Cup and see each team’s water situation, compared with the drought in Brazil’s sertão. Donate and help bring water to those who need it.',
+    'With you for the World Cup. Follow matches, groups, the knockout stage, and statistics.',
   // nav
   navHome: 'Home',
   navMatches: 'Matches',
