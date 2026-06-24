@@ -9,7 +9,6 @@ import { fifaSquadUrl, fifaToIso2, qualState, sortMatches } from '../utils/helpe
 import { FifaMark, HomeMark, WikipediaMark } from '../components/BrandMarks'
 import Flag from '../components/Flag'
 import Icon from '../components/Icon'
-import FeEmCampo from '../components/FeEmCampo'
 import MapLinks from '../components/MapLinks'
 import MatchCard from '../components/MatchCard'
 import TeamName from '../components/TeamName'
@@ -249,8 +248,6 @@ export default function TeamDetail() {
           {t(fav ? 'removeFavorite' : 'addFavorite')}
         </button>
       </header>
-
-      <FeEmCampo code={code} id="fe-em-campo" />
 
       <div className="td-cols">
         <section className="card card-pad">

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n'
 import { useAppData } from '../data/DataContext'
 import Flag from './Flag'
-import WaterIcon from './WaterIcon'
 
 interface TeamNameProps {
   code: string
@@ -30,11 +29,6 @@ export default function TeamName({
       <span className="nm" style={bold ? { fontWeight: 700 } : undefined}>
         {name}
       </span>
-      {team && (
-        <span className="team-pray" title="Água em campo">
-          <WaterIcon size={14} />
-        </span>
-      )}
     </>
   )
   if (link && team) {

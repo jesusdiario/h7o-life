@@ -82,19 +82,3 @@
 .tm-star.on {
   color: var(--gold);
 }
-
-/* marca de "Fé em Campo" no card da seleção */
-.tm-pray {
-  display: inline-flex;
-  vertical-align: middle;
-  margin-left: 6px;
-  color: #7a2e6e;
-}
-[data-theme='dark'] .tm-pray {
-  color: #cf9bc8;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .tm-pray {
-    color: #cf9bc8;
-  }
-}

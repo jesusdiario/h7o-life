@@ -6,7 +6,6 @@ import { useSettings } from '../settings/SettingsContext'
 import { useAppData } from '../data/DataContext'
 import Flag from '../components/Flag'
 import Icon from '../components/Icon'
-import WaterIcon from '../components/WaterIcon'
 import { makeTeamMatcher } from '../utils/teamSearch'
 import './teams.css'
 
@@ -21,9 +20,6 @@ function TeamCard({ team }: { team: Team }) {
       <div className="tm-info">
         <div className="tm-name">
           {pick(team.name, team.code)}
-          <span className="tm-pray" title="Água em campo">
-            <WaterIcon size={15} />
-          </span>
         </div>
         <div className="tm-meta small muted">
           {team.ranking !== null && <span className="chip tnum">#{team.ranking}</span>}

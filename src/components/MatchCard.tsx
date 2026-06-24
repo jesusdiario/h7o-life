@@ -7,7 +7,6 @@ import { useAppData } from '../data/DataContext'
 import { displayTz, fmtDate, fmtTime } from '../utils/time'
 import { fmtTemp, placeholderLabel, STAGE_LABEL_KEY, wmoEmoji } from '../utils/helpers'
 import Flag from './Flag'
-import WaterIcon from './WaterIcon'
 
 interface MatchCardProps {
   match: Match
@@ -44,9 +43,6 @@ function SideRow({
         <>
           <Flag team={team} size={24} />
           <span className="nm">{pick(team.name, side?.code)}</span>
-          <span className="team-pray" title="Água em campo">
-            <WaterIcon size={14} />
-          </span>
         </>
       ) : (
         <>

@@ -18,7 +18,6 @@ import {
   wmoEmoji,
   wmoKey,
 } from '../utils/helpers'
-import FeEmCampo from '../components/FeEmCampo'
 import Flag from '../components/Flag'
 import Icon from '../components/Icon'
 import MapLinks from '../components/MapLinks'
@@ -416,10 +415,6 @@ export default function MatchDetail() {
           </a>
         </div>
       </div>
-
-      {/* ===== Fé em Campo (seleções da Lista Mundial da Perseguição) ===== */}
-      <FeEmCampo code={m.home?.code} />
-      <FeEmCampo code={m.away?.code} />
 
       {/* ===== info cards ===== */}
       <div className="md-grid">
